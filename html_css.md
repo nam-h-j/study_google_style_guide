@@ -16,11 +16,11 @@
  ### General Style Rules
  - Protocol, 프로토콜
 
-  - Use HTTPS for embedded resources where possible.
-  - 가능한 한 내장 리소스에 HTTPS로 표기한다.
+  > Use HTTPS for embedded resources where possible.
+  > 가능한 한 내장 리소스에 HTTPS로 표기한다.
    
-  - Always use HTTPS (https:) for images and other media files, style sheets, and scripts, unless the respective files are not available over HTTPS.
-  - HTTPS에서 각 파일을 사용할 수 없는 경우를 제외하고 항상 이미지 및 기타 미디어 파일, 스타일 시트 및 스크립트에 HTTPS를 사용한다.
+  > Always use HTTPS (https:) for images and other media files, style sheets, and scripts, unless the respective files are not available over HTTPS.
+  > HTTPS에서 각 파일을 사용할 수 없는 경우를 제외하고 항상 이미지 및 기타 미디어 파일, 스타일 시트 및 스크립트에 HTTPS를 사용한다.
 
 ```
 <!-- Not recommended: omits the protocol -->
