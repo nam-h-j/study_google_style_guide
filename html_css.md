@@ -12,7 +12,7 @@
  - Tools are free to obfuscate, minify, and compile as long as the general code quality is maintained.
  - 일반적인 코드 품질이 유지되는 한 툴로써 자유롭게 난독화, 최소화, 및 컴파일할 수 있다.
 ---
-===
+======
 ## General
  ### General Style Rules
  - Protocol, 프로토콜
