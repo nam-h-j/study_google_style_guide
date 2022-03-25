@@ -45,8 +45,8 @@
 
  ### General Formatting Rules
  - Indetation, 들여쓰기
-  - Indent by 2 spaces at a time.
-  - 들여쓰기는 스페이스 2개를 사용한다.
+   - Indent by 2 spaces at a time.
+   - 들여쓰기는 스페이스 2개를 사용한다.
 
   - Don’t use tabs or mix tabs and spaces for indentation.
   - 탭이나 탭과 스페이스를 섞여서 들여쓰기 하지 않는다.
