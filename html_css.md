@@ -21,8 +21,27 @@
    
   - Always use HTTPS (https:) for images and other media files, style sheets, and scripts, unless the respective files are not available over HTTPS.
   - HTTPS에서 각 파일을 사용할 수 없는 경우를 제외하고 항상 이미지 및 기타 미디어 파일, 스타일 시트 및 스크립트에 HTTPS를 사용한다.
-  
-  ![image](https://user-images.githubusercontent.com/22282950/160144224-27fb23de-7e2f-4e84-875d-42eb26eb8615.png)
+
+```
+<!-- Not recommended: omits the protocol -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Not recommended: uses HTTP -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<!-- Recommended -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+```
+```
+/* Not recommended: omits the protocol */
+@import '//fonts.googleapis.com/css?family=Open+Sans';
+
+/* Not recommended: uses HTTP */
+@import 'http://fonts.googleapis.com/css?family=Open+Sans';
+
+/* Recommended */
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+```
 
  ### General Formatting Rules
  - Indetation, 들여쓰기
@@ -43,3 +62,16 @@
   color: blue;
 }
 ```
+- Capitalization, 대소문자 사용
+ - Use only lowercase.
+ - 소문자만 사용한다
+ 
+ - All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings).
+ - 모든 코드는 소문자로 작성한다
+  - HTML엘리먼트 이름
+  - 어트리뷰트
+  - 어트리뷰트 값
+  - CSS 선택자
+  - 프로퍼티
+  - 프로퍼티 값
+  - 문자은 예외
