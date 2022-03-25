@@ -48,7 +48,6 @@
  - Indetation, 들여쓰기
    - 들여쓰기는 스페이스 2개를 사용한다.
      - Indent by 2 spaces at a time.
-   
    - 탭을 사용하거나 탭과 스페이스를 섞어서 들여쓰기 하지 않는다.
      - Don’t use tabs or mix tabs and spaces for indentation.
 
@@ -64,15 +63,15 @@
 }
 ```
 - Capitalization, 대소문자 사용
-  - Use only lowercase.
   - 소문자만 사용한다
- 
-  - All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings).
+    - Use only lowercase. 
+    
   - 모든 코드는 소문자로 작성한다
-   - HTML엘리먼트 이름
-   - 어트리뷰트
-   - 어트리뷰트 값
-   - CSS 선택자
-   - 프로퍼티
-   - 프로퍼티 값
-   - 문자열은 예외
+  - HTML엘리먼트 이름
+  - 어트리뷰트
+  - 어트리뷰트 값
+  - CSS 선택자
+  - 프로퍼티
+  - 프로퍼티 값
+  - 문자열은 예외
+    - All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings). 
