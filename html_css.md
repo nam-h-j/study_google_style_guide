@@ -11,7 +11,9 @@
  
  - Tools are free to obfuscate, minify, and compile as long as the general code quality is maintained.
  - 일반적인 코드 품질이 유지되는 한 툴로써 자유롭게 난독화, 최소화, 및 컴파일할 수 있다.
-======
+
+***
+
 ## General
  ### General Style Rules
  - Protocol, 프로토콜
@@ -42,13 +44,15 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans';
 ```
 
+***
+
  ### General Formatting Rules
  - Indetation, 들여쓰기
-   - Indent by 2 spaces at a time.
    - 들여쓰기는 스페이스 2개를 사용한다.
-
-  - Don’t use tabs or mix tabs and spaces for indentation.
-  - 탭이나 탭과 스페이스를 섞여서 들여쓰기 하지 않는다.
+     - Indent by 2 spaces at a time.
+   
+   - 탭을 사용하거나 탭과 스페이스를 섞어서 들여쓰기 하지 않는다.
+     - Don’t use tabs or mix tabs and spaces for indentation.
 
 ```
 <ul>
@@ -62,15 +66,15 @@
 }
 ```
 - Capitalization, 대소문자 사용
- - Use only lowercase.
- - 소문자만 사용한다
+  - Use only lowercase.
+  - 소문자만 사용한다
  
- - All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings).
- - 모든 코드는 소문자로 작성한다
-  - HTML엘리먼트 이름
-  - 어트리뷰트
-  - 어트리뷰트 값
-  - CSS 선택자
-  - 프로퍼티
-  - 프로퍼티 값
-  - 문자열은 예외
+  - All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings).
+  - 모든 코드는 소문자로 작성한다
+   - HTML엘리먼트 이름
+   - 어트리뷰트
+   - 어트리뷰트 값
+   - CSS 선택자
+   - 프로퍼티
+   - 프로퍼티 값
+   - 문자열은 예외
