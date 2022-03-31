@@ -75,3 +75,14 @@
   - 프로퍼티 값
   - 문자열은 예외
     - All code has to be lowercase: This applies to HTML element names, attributes, attribute values (unless text/CDATA), CSS selectors, properties, and property values (with the exception of strings). 
+
+- Trailing Whitespace
+  - Trailing white space를 삭제한다.
+  - Trailing white space : 직전 라인과 가장 끝과 직후 라인 가장 앞 사이에 들여쓰기를 제외한 공백
+    - Remove trailing white spaces.
+  - Trailing white space는 불필요하고, 차이를 복잡하게 만든다.
+  - Trailing white spaces are unnecessary and can complicate diffs.
+ 
+ ***
+  ### General Meta Rules
+  
