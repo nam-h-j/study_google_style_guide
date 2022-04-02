@@ -50,7 +50,7 @@
 
 ### General Formatting Rules
 
-####Indetation, 들여쓰기
+#### Indetation, 들여쓰기
 
 - 들여쓰기는 스페이스 2개를 사용한다.
   - Indent by 2 spaces at a time.
