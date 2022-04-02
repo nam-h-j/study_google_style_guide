@@ -95,10 +95,11 @@
 #### > Trailing Whitespace
 
 - Trailing white space를 삭제한다.
-- Trailing white space : 직전 라인과 가장 끝과 직후 라인 가장 앞 사이에 들여쓰기를 제외한 공백
   - Remove trailing white spaces.
+- Trailing white space\*
+  > 직전 라인과 가장 끝과 직후 라인 가장 앞 사이에 들여쓰기를 제외한 공백
 - Trailing white space는 불필요하고, 차이를 복잡하게 만든다.
-- Trailing white spaces are unnecessary and can complicate diffs.
+  - Trailing white spaces are unnecessary and can complicate diffs.
 
 ---
 
@@ -108,14 +109,14 @@
 
 - UTF-8 (BOM없이)
   - Use UTF-8(no BOM).
-- \*BOM?
+- BOM\*?
   - Byte Order Mark, '바이트 순서 표시'
   - 유니코드가, little-endian 인지 big-endian 인지 아니면 UTF-8 인지 쉽게 알 수 있도록, 유니코드 파일이 시작되는 첫부분에 보이지 않게, 2~3바이트의 문자열을 추가하는 것
   - 텍스트 에디터 화면에서는 보이지 않고, 헥사 에디터(Hex Editor)\*로 열었을 때만 보인다.
     > 엔디안에 따른 BOM 문자
-    > little-endian 의 BOM : 0xFF 0xFE
-    > big-endian 의 BOM : 0xFE 0xFF
-    > UTF-8 의 BOM : 0xEF 0xBB 0xBF
+    - little-endian 의 BOM : 0xFF 0xFE
+    - big-endian 의 BOM : 0xFE 0xFF
+    - UTF-8 의 BOM : 0xEF 0xBB 0xBF
 - 에디터에서도 BOM이 없는 UTF-8 캐릭터 셋인지 확인
   - Make sure your editor uses UTF-8 as character encoding, without a byte order mark.
 - HTML 템플릿과 문서에 \<meta charset="utf-8"\>을 사용해서 인코딩을 명시해야 한다. 스타일 시트는 UTF-8로 가정하고 있으므로 인코딩을 명시하지 않는다.
