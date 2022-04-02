@@ -1,6 +1,6 @@
 # HTML,CSS
 
-## Background
+## 1. Background
 
 - This document defines formatting and style rules for HTML and CSS.
 - 이 글은 HTML과 CSS의 포맷과 스타일 규칙을 정의한 문서이다.
@@ -16,11 +16,11 @@
 
 ---
 
-## General
+## 2. General
 
-### General Style Rules
+### 2.1 General Style Rules
 
-#### > Protocol, 프로토콜
+#### 2.1.1 Protocol, 프로토콜
 
 - 가능한 한 내장 리소스에 HTTPS로 표기한다.
   - Use HTTPS for embedded resources where possible.
@@ -51,9 +51,9 @@
 
 ---
 
-### General Formatting Rules
+### 2.2 General Formatting Rules
 
-#### > Indetation, 들여쓰기
+#### 2.2.1 Indetation, 들여쓰기
 
 - 들여쓰기는 스페이스 2개를 사용한다.
   - Indent by 2 spaces at a time.
@@ -75,7 +75,7 @@
 
 ---
 
-#### > Capitalization, 대소문자 사용
+#### 2.2.2 Capitalization, 대소문자 사용
 
 - 소문자만 사용한다
   - Use only lowercase.
@@ -92,7 +92,7 @@
 
 ---
 
-#### > Trailing Whitespace
+#### 2.2.3 Trailing Whitespace
 
 - Trailing white space를 삭제한다.
   - Remove trailing white spaces.
@@ -103,9 +103,9 @@
 
 ---
 
-### General Meta Rules
+### 2.3 General Meta Rules
 
-#### > Encoding
+#### 2.3.1 Encoding, 인코딩
 
 - UTF-8 (BOM없이)
   - Use UTF-8(no BOM).
@@ -125,3 +125,15 @@
   - (More on encodings and when and how to specify them can be found in Handling character encodings in HTML and CSS.)
 
 ---
+
+#### 2.3.2 Comments, 주석
+
+- 가능한 경우 필요에 따라 코드를 설명 한다.
+  - Explain code as needed, where possible.
+- 주석을 사용한 코드 설명:
+  - 무엇을 보조 하는지?
+  - 어떤 목적으로 쓰이는지?
+  - 각 솔루션이 사용된 이유, 선호되는 이유?
+  - Use comments to explain code:
+    What does it cover, what purpose does it serve, why is respective solution used or preferred?
+- (This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the project’s complexity.)
