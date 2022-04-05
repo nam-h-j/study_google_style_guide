@@ -130,10 +130,68 @@
 
 - 가능한 경우 필요에 따라 코드를 설명 한다.
   - Explain code as needed, where possible.
-- 주석을 사용한 코드 설명:
+- 주석을 사용한 코드 설명: (쓸수 있는 내용의 예)
+
   - 무엇을 보조 하는지?
   - 어떤 목적으로 쓰이는지?
   - 각 솔루션이 사용된 이유, 선호되는 이유?
   - Use comments to explain code:
     What does it cover, what purpose does it serve, why is respective solution used or preferred?
+
+- ...???
 - (This item is optional as it is not deemed a realistic expectation to always demand fully documented code. Mileage may vary heavily for HTML and CSS code and depends on the project’s complexity.)
+
+---
+
+#### 2.3.3 Action Items, 작업항목
+
+- 작업 항목을 TODO를 사용해서 표기 한다
+  - Mark todos and action items with TODO.
+- todo는 항상 TODO키워드로만 강조 표시 한다, @@ 같은 포맷은 사용하지 않는다
+  - Highlight todos by using the keyword TODO only, not other common formats like @@.
+- 아래 형식과 같이 괄호 안에 연락처(사용자 이름 또는 메일링 리스트)를 추가합니다. TODO(contact)
+  - Append a contact (username or mailing list) in parentheses as with the format TODO(contact).
+- 작업 항목은 콜론 뒤에 추가 합니다. TODO : action item.
+  - Append action items after a colon as in TODO: action item.
+
+```
+{# TODO(john.doe): revisit centering #}
+<center>Test</center>
+```
+
+```
+<!-- TODO: remove optional tags -->
+<ul>
+  <li>Apples</li>
+  <li>Oranges</li>
+</ul>
+```
+
+---
+
+## 3. HTML
+
+### 3.1 HTML Style Rules
+
+#### 3.1.1 Document Type, 문서유형
+
+- HTML5 사용
+  - Use HTML5.
+- HTML5는 모든 HTML문서에 사용해야 한다.
+  (HTML문서(text/html)사용을 권장합니다. XHTML(application/xhtml+xml)은 사용하지 마십시오, 브라우저와 인프라지원이 부족하고 HTML보다 최적화가 어렵습니다.)
+  - HTML5 (HTML syntax) is preferred for all HTML documents: <!DOCTYPE html>.
+    (It’s recommended to use HTML, as text/html. Do not use XHTML. XHTML, as application/xhtml+xml, lacks both browser and infrastructure support and offers less room for optimization than HTML.)
+- HTML에서 문제가 없지만, void 요소를 닫지 마십시오, <br>(O) <br />(X)
+
+---
+
+#### 3.1.2 HTML Validity, HTML 유효성
+
+- 가능한 유효한 HTML을 사용한다.
+  - Use valid HTML where possible.
+- 파일 크기와 관련한 성능을 목적으로 인해 불가능한 경우가 아니면 유효한 HTML 코드를 사용한다.
+  - Use valid HTML code unless that is not possible due to otherwise unattainable performance goals regarding file size.
+- W3C HTML 유효성 검사기와 같은 도구를 사용하여 테스트 한다(https://validator.w3.org/nu/)
+  - Use tools such as the W3C HTML validator to test.
+- 유효한 HTML의 사용은 측정 가능한 기준 품질 속성으로 기술 요구 사항 및 제약 조건에 대한 학습에 기여하고 적절한 HTML 사용을 보장한다.
+  - Using valid HTML is a measurable baseline quality attribute that contributes to learning about technical requirements and constraints, and that ensures proper HTML usage.
