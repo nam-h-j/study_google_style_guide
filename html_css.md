@@ -214,4 +214,54 @@
 - W3C HTML 유효성 검사기와 같은 도구를 사용하여 테스트 한다(https://validator.w3.org/nu/)
   - Use tools such as the W3C HTML validator to test.
 - 유효한 HTML의 사용은 측정 가능한 기준 품질 속성으로 기술 요구 사항 및 제약 조건에 대한 학습에 기여하고 적절한 HTML 사용을 보장한다.
+
   - Using valid HTML is a measurable baseline quality attribute that contributes to learning about technical requirements and constraints, and that ensures proper HTML usage.
+
+  #### 3.1.3 Semantics, 시멘틱
+
+  - 목적에 맞는 HTML을 사용한다.
+    - Use HTML according to its purpose.
+  - 생성된 목적에 맞는 요소(때로는 "태그"라고 잘못 부름)를 사용한다.
+    - Use elements (sometimes incorrectly called “tags”) for what they have been created for.
+  - 예를들어, 제목 요소에는 제목을, 단락에는 p를, 앵커에는 a를 사용하는 등이 있다.
+    - For example, use heading elements for headings, p elements for paragraphs, a elements for anchors, etc.
+  - HTML요소를 목적에 맞게 사용하는 것은 접근성, 재사용성 및 코드 효율을 위해 중요하다.
+    - Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.
+
+```html
+<!-- Not recommended -->
+<div onclick="goToRecommendations();">All recommendations</div>
+
+<!-- Recommended -->
+<a href="recommendations/">All recommendations</a>
+```
+
+### 3.1.4 Multimedia Fallback, 멀티미디어 폴백
+
+- 멀티미디어에 대한 대체 콘텐츠를 제공한다.
+
+  - Provide alternative contents for multimedia.
+
+- 멀티미디어(이미지, 비디오, 캔버스를 통한 애니매이션)는 대체 콘텐츠를 제공 해야 한다.
+  - For multimedia, such as images, videos, animated objects via canvas, make sure to offer alternative access.
+- 의미 있는 대체 텍스트를 의미하는 이미지 alt와 비디오 오디오의 캡션(가능한 경우)
+
+  - For images that means use of meaningful alternative text (alt) and for video and audio transcripts and captions, if available.
+
+- 대체 콘텐츠를 제공하는 것은 접근성에 있어서 중요한 이유:
+  - Providing alternative contents is important for accessibility reasons:
+- 시각 장애인 사용자가 @alt없이 이미지에 대해서 알 방법이 없으며,
+  - A blind user has few cues to tell what an image is about without @alt,
+- 그리고 다른 유저들도 비디오와 오디오가 어떤 컨텐츠인지 알 방법이 없다.
+  - and other users may have no way of understanding what video or audio contents are about either.
+- alt 속성이 불필요한 중복을 유발하는 이미지나, CSS를 즉시 사용할수 없는 장식적 목적의 이미지의 경우 대체텍스트를 사용하지 않는다. alt=""
+
+  - (For images whose alt attributes would introduce redundancy, and for images whose purpose is purely decorative which you cannot immediately use CSS for, use no alternative text, as in alt="".)
+
+  ```html
+  <!-- Not recommended -->
+  <img src="spreadsheet.png" />
+
+  <!-- Recommended -->
+  <img src="spreadsheet.png" alt="Spreadsheet screenshot." />
+  ```
