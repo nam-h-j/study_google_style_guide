@@ -19,6 +19,8 @@
 - [3.1 HTML Style Rules](#31-html-style-rules)
   - [3.1.1 Document Type, 문서유형](#311-document-type-문서유형)
   - [3.1.2 HTML Validity, HTML 유효성](#312-html-validity-html-유효성)
+  - [3.1.3 Semantics, 시멘틱](#313-semantics-시멘틱)
+  - [3.1.4 Multimedia Fallback, 멀티미디어 폴백](#314-multimedia-fallback-멀티미디어-폴백)
 
 ## 1. Background
 
@@ -236,7 +238,7 @@
 <a href="recommendations/">All recommendations</a>
 ```
 
-### 3.1.4 Multimedia Fallback, 멀티미디어 폴백
+#### 3.1.4 Multimedia Fallback, 멀티미디어 폴백
 
 - 멀티미디어에 대한 대체 콘텐츠를 제공한다.
 
