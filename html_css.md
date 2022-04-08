@@ -21,6 +21,7 @@
   - [3.1.2 HTML Validity, HTML 유효성](#312-html-validity-html-유효성)
   - [3.1.3 Semantics, 시멘틱](#313-semantics-시멘틱)
   - [3.1.4 Multimedia Fallback, 멀티미디어 폴백](#314-multimedia-fallback-멀티미디어-폴백)
+  - [3.1.5 Separation of Concerns, 구조의 분리](#315-separation-of-concerns-구조의-분리)
 
 ## 1. Background
 
@@ -219,16 +220,18 @@
 
   - Using valid HTML is a measurable baseline quality attribute that contributes to learning about technical requirements and constraints, and that ensures proper HTML usage.
 
-  #### 3.1.3 Semantics, 시멘틱
+---
 
-  - 목적에 맞는 HTML을 사용한다.
-    - Use HTML according to its purpose.
-  - 생성된 목적에 맞는 요소(때로는 "태그"라고 잘못 부름)를 사용한다.
-    - Use elements (sometimes incorrectly called “tags”) for what they have been created for.
-  - 예를들어, 제목 요소에는 제목을, 단락에는 p를, 앵커에는 a를 사용하는 등이 있다.
-    - For example, use heading elements for headings, p elements for paragraphs, a elements for anchors, etc.
-  - HTML요소를 목적에 맞게 사용하는 것은 접근성, 재사용성 및 코드 효율을 위해 중요하다.
-    - Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.
+#### 3.1.3 Semantics, 시멘틱
+
+- 목적에 맞는 HTML을 사용한다.
+  - Use HTML according to its purpose.
+- 생성된 목적에 맞는 요소(때로는 "태그"라고 잘못 부름)를 사용한다.
+  - Use elements (sometimes incorrectly called “tags”) for what they have been created for.
+- 예를들어, 제목 요소에는 제목을, 단락에는 p를, 앵커에는 a를 사용하는 등이 있다.
+  - For example, use heading elements for headings, p elements for paragraphs, a elements for anchors, etc.
+- HTML요소를 목적에 맞게 사용하는 것은 접근성, 재사용성 및 코드 효율을 위해 중요하다.
+  - Using HTML according to its purpose is important for accessibility, reuse, and code efficiency reasons.
 
 ```html
 <!-- Not recommended -->
@@ -237,6 +240,8 @@
 <!-- Recommended -->
 <a href="recommendations/">All recommendations</a>
 ```
+
+---
 
 #### 3.1.4 Multimedia Fallback, 멀티미디어 폴백
 
@@ -267,3 +272,45 @@
   <!-- Recommended -->
   <img src="spreadsheet.png" alt="Spreadsheet screenshot." />
   ```
+
+### 3.1.5 Separation of Concerns, 구조의 분리
+
+- 구조, 프레젠테이션, 동적처리 부분을 분리하라.
+  - Separate structure from presentation from behavior.
+- 구조(마크업), 프레젠테이션(스타일), 동적처리(스크립팅)을 엄걱하게 분리하고 세가지의 인터렉션을 최소로 유지해야 한다.
+  - Strictly keep structure (markup), presentation (styling), and behavior (scripting) apart, and try to keep the interaction between the three to an absolute minimum.
+- 즉, 문서와 템플릿에 구조적 목적으로만 사용되는 HTML만 포함 되어 있어야 하고, 프레젠테이션 관련 된 것은 모두 스타일시트로, 동적처리들은 모두 스크립트로 옮겨야 한다.
+  - That is, make sure documents and templates contain only HTML and HTML that is solely serving structural purposes. Move everything presentational into style sheets, and everything behavioral into scripts.
+- 또한, 문서와 템플릿에서 가능한 적은 수의 스타일 시트와 스크립트를 연결하여 링크를 최소화 해야한다.
+  - In addition, keep the contact area as small as possible by linking as few style sheets and scripts as possible from documents and templates.
+- 구조/프레젠테이션/동적처리 로 나누는 것은 유지보수를 위해 중요하다. HTML문서와 템플릿을 직접 변경하는 것은 스타일시트와 스크립트를 수정하는 것 보다 항상 더 많은 비용이 든다.
+  - Separating structure from presentation from behavior is important for maintenance reasons. It is always more expensive to change HTML documents and templates than it is to update style sheets and scripts.
+
+```html
+<!-- Not recommended -->
+<!DOCTYPE html>
+<title>HTML sucks</title>
+<link rel="stylesheet" href="base.css" media="screen" />
+<link rel="stylesheet" href="grid.css" media="screen" />
+<link rel="stylesheet" href="print.css" media="print" />
+<h1 style="font-size: 1em;">HTML sucks</h1>
+<p>I’ve read about this on a few sites but now I’m sure:</p>
+<u>HTML is stupid!!1</u>
+<center>
+  I can’t believe there’s no way to control the styling of my website without
+  doing everything all over again!
+</center>
+<!-- Recommended -->
+<!DOCTYPE html>
+<title>My first CSS-only redesign</title>
+<link rel="stylesheet" href="default.css" />
+<h1>My first CSS-only redesign</h1>
+<p>
+  I’ve read about this on a few sites but today I’m actually doing it:
+  separating concerns and avoiding anything in the HTML of my website that is
+  presentational.
+</p>
+<p>It’s awesome!</p>
+```
+
+---
