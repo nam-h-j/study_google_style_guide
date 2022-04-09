@@ -273,6 +273,8 @@
   <img src="spreadsheet.png" alt="Spreadsheet screenshot." />
   ```
 
+---
+
 ### 3.1.5 Separation of Concerns, 구조의 분리
 
 - 구조, 프레젠테이션, 동적처리 부분을 분리하라.
@@ -311,6 +313,27 @@
   presentational.
 </p>
 <p>It’s awesome!</p>
+```
+
+---
+
+### 3.1.6 Entity References, 엔티티 참조
+
+- 엔티티 참조를 사용하지 마시오.
+  - Do not use entity references.
+- 팀이나 작업자 사이에서 동일한 인코딩(UTF-8)을 사용하는 상황이라면 &mdash\;, &rdquo\;, &#x263a\;, 등과 같은 엔티티 참조를 사용할 필요가 없다.
+
+  - There is no need to use entity references like &mdash\;, &rdquo\;, or &#x263a\;, assuming the same encoding (UTF-8) is used for files and editors as well as among teams.
+
+- 유일한 예외 사항은 HTML애서 특별한 의미가 있는 문자(\[<\] 나 \[&\] )와 제어 또는 "보이지 않는" 문자(예:공백없음)등에만 사용합니다.
+  - The only exceptions apply to characters with special meaning in HTML (like < and &) as well as control or “invisible” characters (like no-break spaces).
+
+```html
+<!-- Not recommended -->
+The currency symbol for the Euro is &ldquo;&eur;&rdquo;.
+
+<!-- Recommended -->
+The currency symbol for the Euro is “€”.
 ```
 
 ---
