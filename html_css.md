@@ -22,6 +22,8 @@
   - [3.1.3 Semantics, 시멘틱](#313-semantics-시멘틱)
   - [3.1.4 Multimedia Fallback, 멀티미디어 폴백](#314-multimedia-fallback-멀티미디어-폴백)
   - [3.1.5 Separation of Concerns, 구조의 분리](#315-separation-of-concerns-구조의-분리)
+  - [3.1.6 Entity References, 엔티티 참조](#316-entity-references-엔티티-참조)
+  - [3.1.7 Optional Tags, 선택적 태그](#317-optional-tags-선택적-태그)
 
 ## 1. Background
 
@@ -367,6 +369,41 @@ The currency symbol for the Euro is “€”.
 <!DOCTYPE html>
 <title>Saving money, saving bytes</title>
 <p>Qed.</p>
+```
+
+---
+
+### 3.1.7 "type" Attributes, 타입 속성
+
+- 스타일 시트 및 스크립트에 대한 타입 속성을 생략한다.
+
+  - Omit type attributes for style sheets and scripts.
+
+- 스타일시트와 스크립트에 타입속성을 사용하지 마라.(CSS와 JS를 사용하지 않는 경우 이외에)
+
+  - Do not use type attributes for style sheets (unless not using CSS) and scripts (unless not using JavaScript).
+
+- HTML5에서는 'text/css'와 'text/javascript'를 내포하고 있기 때문에 타입을 특정할 필요가 없다. 이 부분은 오래된 브라우저에서도 안전하게 수행할 수 있다.
+
+  - Specifying type attributes in these contexts is not necessary as HTML5 implies text/css and text/javascript as defaults. This can be safely done even for older browsers.
+
+```html
+<!-- Not recommended -->
+<link
+  rel="stylesheet"
+  href="https://www.google.com/css/maia.css"
+  type="text/css"
+/>
+<!-- Recommended -->
+<link rel="stylesheet" href="https://www.google.com/css/maia.css" />
+
+<!-- Not recommended -->
+<script
+  src="https://www.google.com/js/gweb/analytics/autotrack.js"
+  type="text/javascript"
+></script>
+<!-- Recommended -->
+<script src="https://www.google.com/js/gweb/analytics/autotrack.js"></script>
 ```
 
 ---
