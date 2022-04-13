@@ -26,6 +26,7 @@
   - [3.1.7 Optional Tags, 선택적 태그](#317-optional-tags-선택적-태그)
   - [3.1.8 "type" Attributes, 타입 속성](#318-"type"-attributes-타입-속성)
   - [3.1.9 "id" Attributes, "id" 속성](#319-"id"-attributes-"id"-속성)
+- [3.2 HTML Formatting Rules](#32-html-formatting-rules)
 
 ## 1. Background
 
@@ -279,7 +280,7 @@
 
 ---
 
-### 3.1.5 Separation of Concerns, 구조의 분리
+#### 3.1.5 Separation of Concerns, 구조의 분리
 
 - 구조, 프레젠테이션, 동적처리 부분을 분리하라.
   - Separate structure from presentation from behavior.
@@ -321,7 +322,7 @@
 
 ---
 
-### 3.1.6 Entity References, 엔티티 참조
+#### 3.1.6 Entity References, 엔티티 참조
 
 - 엔티티 참조를 사용하지 마시오.
   - Do not use entity references.
@@ -342,7 +343,7 @@ The currency symbol for the Euro is “€”.
 
 ---
 
-### 3.1.7 Optional Tags, 선택적 태그
+#### 3.1.7 Optional Tags, 선택적 태그
 
 - 선택적 태그를 생략합니다(선택 사항).
 
@@ -375,7 +376,7 @@ The currency symbol for the Euro is “€”.
 
 ---
 
-### 3.1.8 "type" Attributes, 타입 속성
+#### 3.1.8 "type" Attributes, 타입 속성
 
 - 스타일 시트 및 스크립트에 대한 타입 속성을 생략한다.
 
@@ -410,7 +411,7 @@ The currency symbol for the Euro is “€”.
 
 ---
 
-### 3.1.9 "id" Attributes, "id" 속성
+#### 3.1.9 "id" Attributes, "id" 속성
 
 - 불필요한 "id" 속성을 피하라.
 
@@ -436,6 +437,60 @@ The currency symbol for the Euro is “€”.
   <div id="user-profile"></div>
   …
 </div>
+```
+
+---
+
+### 3.2 HTML Formatting Rules
+
+#### 3.2.1 General Formatting, 일반 서식
+
+- 모든 블록, 리스트, 테이블 요소에서 줄바꿈 하고 모든 자식 요소는 들여쓰기 한다.
+
+  - Use a new line for every block, list, or table element, and indent every such child element.
+
+- 요소의 스타일 지정과는 별개로(CSS에서 요소마다 다른 display 속성을 가질 수 있으므로)모든 블록, 또는 테이블 요소는 줄바꿈 한다.
+
+  - Independent of the styling of an element (as CSS allows elements to assume a different role per display property), put every block, list, or table element on a new line.
+
+- 또한, 블록, 리스트 또는 테이블 요소의 자식 요소는 모두 들여쓰기 한다.
+  Also, indent them if they are child elements of a block, list, or table element.
+
+- 리스트 항목 사이에 공백 문제가 발생하면 li요소를 한 줄에 작성해도 된다. linter는 오류대신 경고를 표시하도록 하는 것이 좋다.
+  (If you run into issues around whitespace between list items it’s acceptable to put all li elements in one line. A linter is encouraged to throw a warning instead of an error.)
+
+```html
+<blockquote>
+  <p><em>Space</em>, the final frontier.</p>
+</blockquote>
+
+<ul>
+  <li>Moe
+  <li>Larry
+  <li>Curly
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Income
+      <th scope="col">Taxes
+  <tbody>
+    <tr>
+      <td>$ 5.00
+      <td>$ 4.50
+</table>
+
+```
+
+---
+
+#### 3.2.2 HTML Line-Wrapping
+
+-
+
+```html
+
 ```
 
 ---
