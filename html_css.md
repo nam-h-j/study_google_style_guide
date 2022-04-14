@@ -337,3 +337,36 @@ The currency symbol for the Euro is “€”.
 ```
 
 ---
+
+### 3.1.7 Optional Tags, 선택적 태그
+
+- 선택적 태그를 생략합니다(선택 사항).
+
+  - Omit optional tags (optional).
+
+- 파일 크기 최적화 및 스캔 가능성을 위해 선택적 태그를 생략하는 것이 좋습니다. HTML5 사양 은 생략할 수 있는 태그를 정의합니다. [Optional tags, HTML5 Specification](https://html.spec.whatwg.org/multipage/syntax.html#syntax-tag-omission)
+
+  - For file size optimization and scannability purposes, consider omitting optional tags. The HTML5 specification defines what tags can be omitted.
+
+- (이 방식은 일반적으로 웹 개발자가 배우는 것과 크게 다르기 때문에 더 넓은 지침으로 제정해서 유예기간이 필요할 수 있다. 일관성과 단순성을 위해서 선택사항이 아닌, 모든 선택적 태그를 생략하는 것이 좋습니다.)
+  - (This approach may require a grace period to be established as a wider guideline as it’s significantly different from what web developers are typically taught. For consistency and simplicity reasons it’s best served omitting all optional tags, not just a selection.)
+
+```html
+<!-- Not recommended -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spending money, spending bytes</title>
+  </head>
+  <body>
+    <p>Sic.</p>
+  </body>
+</html>
+<!-- Recommended -->
+<!-- Recommended -->
+<!DOCTYPE html>
+<title>Saving money, saving bytes</title>
+<p>Qed.</p>
+```
+
+---
