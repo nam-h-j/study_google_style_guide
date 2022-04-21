@@ -27,6 +27,8 @@
   - [3.1.8 "type" Attributes, 타입 속성](#318-"type"-attributes-타입-속성)
   - [3.1.9 "id" Attributes, "id" 속성](#319-"id"-attributes-"id"-속성)
 - [3.2 HTML Formatting Rules](#32-html-formatting-rules)
+  - [3.2.1 General Formatting, 일반 서식](#321-general-formatting-일반-서식)
+  - [3.2.2 HTML Line-Wrapping, html 줄 바꿈](#322-html-line-wrapping-html-줄-바꿈)
 
 ## 1. Background
 
@@ -485,12 +487,39 @@ The currency symbol for the Euro is “€”.
 
 ---
 
-#### 3.2.2 HTML Line-Wrapping
+#### 3.2.2 HTML Line-Wrapping, html 줄 바꿈
 
--
+- 긴 라인은 줄바꿈 한다.(선택사항)
+
+  - Break long lines (optional).
+
+- HTML에 대한 컬럼을 제한하는 권장 사항은 없지만, 가독성이 크게 향샹되면 긴 줄을 줄바꿈 하는 것을 고려해볼 수 있다.
+  - While there is no column limit recommendation for HTML, you may consider wrapping long lines if it significantly improves readability.
+- 줄 바꿈할 때 줄 바꿈된 속성을 자식 요소와 구분하려면 각 연속 줄을 원래 줄에서 최소 4칸 들여써야 한다.
+  - When line-wrapping, each continuation line should be indented at least 4 additional spaces from the original line to distinguish wrapped attributes from child elements.
+
+```
+<md-progress-circular md-mode="indeterminate" class="md-accent"
+    ng-show="ctrl.loading" md-diameter="35">
+</md-progress-circular>'
+```
 
 ```html
+<md-progress-circular
+  md-mode="indeterminate"
+  class="md-accent"
+  ng-show="ctrl.loading"
+  md-diameter="35"
+>
+</md-progress-circular>
+```
 
+```
+<md-progress-circular md-mode="indeterminate"
+                      class="md-accent"
+                      ng-show="ctrl.loading"
+                      md-diameter="35">
+</md-progress-circular>
 ```
 
 ---
