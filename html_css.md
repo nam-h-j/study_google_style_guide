@@ -24,6 +24,8 @@
   - [3.1.5 Separation of Concerns, 구조의 분리](#315-separation-of-concerns-구조의-분리)
   - [3.1.6 Entity References, 엔티티 참조](#316-entity-references-엔티티-참조)
   - [3.1.7 Optional Tags, 선택적 태그](#317-optional-tags-선택적-태그)
+  - [3.1.8 "type" Attributes, 타입 속성](#318-"type"-attributes-타입-속성)
+  - [3.1.9 "id" Attributes, "id" 속성](#319-"id"-attributes-"id"-속성)
 
 ## 1. Background
 
@@ -373,7 +375,7 @@ The currency symbol for the Euro is “€”.
 
 ---
 
-### 3.1.7 "type" Attributes, 타입 속성
+### 3.1.8 "type" Attributes, 타입 속성
 
 - 스타일 시트 및 스크립트에 대한 타입 속성을 생략한다.
 
@@ -404,6 +406,36 @@ The currency symbol for the Euro is “€”.
 ></script>
 <!-- Recommended -->
 <script src="https://www.google.com/js/gweb/analytics/autotrack.js"></script>
+```
+
+---
+
+### 3.1.9 "id" Attributes, "id" 속성
+
+- 불필요한 "id" 속성을 피하라.
+
+  - Avoid unnecessary id attributes.
+
+- 클래스 속성을 스타일링과 스크립팅을 위한 데이터 속성으로 사용하는 것을 권장한다.
+
+  - Prefer class attributes for styling and data attributes for scripting.
+
+- id 속성들은 엄격한 관리가 필요한 경우, 자바스크립트의 식별자와 같아지지 않도록 항상 값에 하이픈을 포함시킨다. 예: "profile" 또는 "userProfile" 보다는 "user-profile"를 사용
+
+  - Where id attributes are strictly required, always include a hyphen in the value to ensure it does not match the JavaScript identifier syntax, e.g. use user-profile rather than just profile or userProfile.
+
+- 엘리먼트에 id 속성이 있으면 브라우저가 글로벌 window 프로토타입에 명명된 속성으로 사용되도록 하여 예기치 못한 동작을 유발 할 수 있다. 하이픈이 포함된 속성 값은 id 속성 이름으로 사용할 수 있지만 전역 Javascirpt 변수로 참조할 수 없음.
+  - When an element has an id attribute, browsers will make that available as a named property on the global window prototype, which may cause unexpected behavior. While id attribute values containing a hyphen are still available as property names, these cannot be referenced as global JavaScript variables.
+
+```html
+<!-- Not recommended: `window.userProfile` will resolve to reference the <div> node -->
+<div id="userProfile"></div>
+<!-- Recommended: `id` attribute is required and its value includes a hyphen -->
+<div aria-describedby="user-profile">
+  …
+  <div id="user-profile"></div>
+  …
+</div>
 ```
 
 ---
